@@ -1,9 +1,9 @@
 function onStart(){
-    var date = new Date();
+    const date = new Date();
 
-    var h = document.getElementById("hour");
-    var m = document.getElementById("minute");
-    var s = document.getElementById("second");
+    let h = document.getElementById("hour");
+    let m = document.getElementById("minute");
+    let s = document.getElementById("second");
 
     s.style = 'transform-origin: left center;';
     s.style = 'transform: rotate(' + (date.getSeconds() * 6 - 90) + 'deg)';
@@ -15,7 +15,7 @@ function onStart(){
 }
 
 function rotate(h, m, s){
-    var date = new Date();
+    const date = new Date();
 
     s.style = 'transform: rotate(' + (date.getSeconds() * 6 - 90) + 'deg)';
     m.style = 'transform: rotate(' + (date.getMinutes() * 6 + (date.getSeconds() * 6) * 0.1 - 90) + 'deg)';
